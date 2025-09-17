@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: db_connector
+Version: 0.2.1
+Summary: Simple DB connectors for GreenPlum and Teradata
+Author: Anton Meshchaninov
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0
+Requires-Dist: numpy>=1.19
+Requires-Dist: psycopg2>=2.8
+Requires-Dist: sqlalchemy>=1.4
+Requires-Dist: pyodbc

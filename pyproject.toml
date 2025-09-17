@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "db_connector"
+version = "0.2.1"
+description = "Simple DB connectors for GreenPlum and Teradata"
+readme = "README.md"
+authors = [
+    { name = "Anton Meshchaninov" }
+]
+requires-python = ">=3.7"
+
+# Зависимости, которые будут установлены вместе с пакетом:
+dependencies = [
+    "pandas>=1.0",
+    "numpy>=1.19",
+    "psycopg2>=2.8",
+    "sqlalchemy>=1.4",
+    "pyodbc", # teradata-коннектор
+]
+
+# Если есть LICENSE-файл:
+# license = { file = "LICENSE" }
+
+[tool.setuptools]
+#Ничего особо не настраиваем, оставляем упрощённо.
+
+[tool.setuptools.packages.find]
+#Указываем, что искать пакеты, начинающиеся с "Connector_package"
+#т.е. папка называется "Connector_package".
+include = ["Connector_package*"]
